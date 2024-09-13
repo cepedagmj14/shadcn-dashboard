@@ -13,10 +13,14 @@ import {
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 export default function Page() {
-  const [first, setFirst] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
   return (
-    <div className="grid gap-3">
-      <AlertDialog onOpenChange={(value) => console.log({ value })}>
+    <div className="grid grid-cols-2 gap-3">
+      <AlertDialog
+        open={dialogOpen}
+        /*  onOpenChange={(value) => console.log({ value })} */
+        onOpenChange={setDialogOpen}
+      >
         <AlertDialogTrigger asChild>
           <Button variant="success">Show Dialog</Button>
         </AlertDialogTrigger>
@@ -38,6 +42,7 @@ export default function Page() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+      <Button onClick={() => setDialogOpen(true)}>Open dialog</Button>
     </div>
   );
 }
