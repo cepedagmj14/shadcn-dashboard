@@ -21,6 +21,7 @@ const links = [
   { name: "contextMenu", href: "contextMenu" },
   { name: "menubar", href: "menubar" },
   { name: "otp", href: "otp" },
+  { name: "progress", href: "progress" },
 ].sort((a, b) => a.name.localeCompare(b.name));
 
 export default function DashboardLayout({
