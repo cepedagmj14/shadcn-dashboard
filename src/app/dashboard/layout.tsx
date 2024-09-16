@@ -19,6 +19,7 @@ const links = [
   { name: "command", href: "command" },
   { name: "combobox", href: "combobox" },
   { name: "contextMenu", href: "contextMenu" },
+  { name: "menubar", href: "menubar" },
 ].sort((a, b) => a.name.localeCompare(b.name));
 
 export default function DashboardLayout({
